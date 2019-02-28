@@ -1,0 +1,44 @@
+body {
+	margin: 40px;
+}
+
+.transparent {
+	border: none;
+}
+
+#emp-table {
+	display: table;
+}
+
+#emp-table {
+	display: table;
+	width: 95%;
+}
+
+#emp-header {
+	display: table-header-group;
+	background-color: lightgray;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.emp-header-cell {
+	display: table-cell;
+	padding: 10px;
+	border: 1px solid black;
+}
+
+#emp-body {
+	display: table-row-group;
+}
+
+.emp-body-row {
+	display: table-row;
+}
+
+.emp-body-cell {
+	display: table-cell;
+	text-align: left;
+	padding: 10px;
+	border: 1px solid black;
+}
