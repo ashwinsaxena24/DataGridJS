@@ -1,13 +1,13 @@
-import {addToTable} from './adddata.js';
+import {CreateTable} from './CreateTable.js';
 
 function addData(data) {
-	if(typeof data !== 'undefined') {
-		data = JSON.parse(data);
-		data.forEach(addToTable);
-	}
+	var table = document.getElementById('emp');
+	table.setAttribute('data', data);
+	var cols = ['ID', 'First Name', 'Last Name', 'Email'];
+	table.setAttribute('columns', cols);
 }
 
-function getData() {
+(function() {
 	var data;
 	data = localStorage.getItem('data');
 	if(data == null) {
@@ -27,6 +27,6 @@ function getData() {
 		addData(data);
 		console.log('already saved');
 	}
-}
+}());
 
-getData();
+customElements.define('custom-table', CreateTable);
